@@ -1,0 +1,64 @@
+<!-- Document Object Model (DOM) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+<!-- 
+
+title.innerHTML
+-> 'DOM learning on Chai aur code <span style="display: none;">test text</span>'
+
+title.innerText
+-> 'DOM learning on Chai aur code'
+
+document.getElementById('title')
+-> <h1 id=​"title" class=​"heading">​…​</h1>​​ 
+
+document.querySelector('h2')
+-> <h2>​Lorem ipsum dolor sit.​</h2>
+
+document.querySelector('h1')
+-> <h1 id=​"title" class=​"heading">​…​</h1>​​
+
+NOTE: All the query is similar to CSS selector
+
+const newUl = document.querySelector('ul').querySelector('li').style.backgroundColor = 'blue'
+
+NOTE: NodeList is different from Array, so we cant use map, but we can use forEach
+So, if we want to use map, we need to convert it to Array.
+
+In HTML Collection we cant use any loop function(forEach, map,... etc), so we need to convert it into array 
+
+How to convert HTML Collection to Array?
+const tempClassList = document.getElementByClassName('list-item')
+Array.from(tempClassList)
+
+-->
